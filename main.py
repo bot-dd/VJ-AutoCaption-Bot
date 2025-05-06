@@ -4,10 +4,10 @@
 
 import pyrogram, os, asyncio
 
-app_id = int(os.environ.get("app_id", ""))
-api_hash = os.environ.get("api_hash", "")
-bot_token = os.environ.get("bot_token", "")
-custom_caption = os.environ.get("custom_caption", "`{file_name}`\n\n**Powered By - @VJ_Botz**") # Here You Can Give Anything, if You Want Real File Name Then Use {file_name}
+app_id = int(os.environ.get("app_id", "26649585"))
+api_hash = os.environ.get("api_hash", "588a3ea6fd01ae88bd2e10fed7d55b2c")
+bot_token = os.environ.get("bot_token", "7545544173:AAFLyGXW3shlfcxDfd5CZ9X4JTBjlXkAGqs")
+custom_caption = os.environ.get("custom_caption", "`{file_name}`\n\n**Powered By - @RM_Movie_Flix**") # Here You Can Give Anything, if You Want Real File Name Then Use {file_name}
 
 AutoCaptionBotV1 = pyrogram.Client(name="AutoCaptionBotV1", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
 
@@ -15,15 +15,15 @@ start_message = """
 <b>👋Hello {}</b>
 <b>I am an AutoCaption bot</b>
 <b>All you have to do is to add me to your channel as admin and I will show you my power</b>
-<b>@VJ_Botz</b>"""
+<b>@RM_Movie_Flix</b>"""
 
 about_message = """
-<b>• Name : <a href=https://t.me/VJ_Botz>VJ AutoCaption</a></b>
-<b>• Developer : <a href=https://t.me/VJ_Botz>[VJ UPDATES]</a></b>
+<b>• Name : <a href=https://t.me/RM_Movie_Flix>RM AutoCaption</a></b>
+<b>• Developer : <a href=https://t.me/RM_Movi>[RM Movies]</a></b>
 <b>• Language : Python3</b>
 <b>• Library : Pyrogram v{version}</b>
-<b>• Updates : <a href=https://t.me/VJ_Botz>Click Here</a></b>
-<b>• Source Code : <a href=https://github.com/VJBots/VJ-AutoCaption-Bot>Click Here</a></b>"""
+<b>• Updates : <a href=https://t.me/RM_Movie_Flix>Click Here</a></b>
+<b>• Source Code : <a href=https://github.com/>Click Here</a></b>"""
 
 @AutoCaptionBotV1.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
@@ -71,7 +71,7 @@ def get_file_details(update: pyrogram.types.Message):
 def start_buttons(bot, update):
     bot = bot.get_me()
     buttons = [[
-        pyrogram.types.InlineKeyboardButton("Updates", url="t.me/VJ_Botz"),
+        pyrogram.types.InlineKeyboardButton("Updates", url="t.me/RM_Movie_Flix"),
         pyrogram.types.InlineKeyboardButton("About 🤠", callback_data="about")
     ],[
         pyrogram.types.InlineKeyboardButton("➕️ Add To Your Channel ➕️", url=f"http://t.me/{bot.username}?startchannel=true")
